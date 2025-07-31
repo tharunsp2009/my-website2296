@@ -46,6 +46,9 @@ def submit():
     return f"<h2>Thanks {name}, your message was received!</h2>"
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=81)
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
+
 
 
